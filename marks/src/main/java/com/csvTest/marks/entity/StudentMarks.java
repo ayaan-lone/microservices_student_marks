@@ -6,27 +6,33 @@ import jakarta.persistence.Id;
 
 @Entity
 public class StudentMarks {
-	@Column
-	@Id
-	private long studentId;
-	@Column
-	private int marks;
 
-	public long getStudentId() {
-		return studentId;
-	}
+    // Primary key representing student ID
+    @Id
+    @Column
+    private long studentId;
 
-	public void setStudentId(long studentId) {
-		this.studentId = studentId;
-	}
+    // Column to store marks obtained by the student
+    @Column
+    private int marks;
 
-	public int getNMarks() {
-		return marks;
-	}
+    // Getter method for retrieving student ID
+    public long getStudentId() {
+        return studentId;
+    }
 
-	public void setMarks(int marks) {
-		this.marks = marks;
-	}
+    // Setter method for setting student ID
+    public void setStudentId(long studentId) {
+        this.studentId = studentId;
+    }
 
+    // Getter method for retrieving marks
+    public int getMarks() {
+        return marks;
+    }
 
+    // Setter method for setting marks
+    public void setMarks(int marks) {
+        this.marks = marks;
+    }
 }
